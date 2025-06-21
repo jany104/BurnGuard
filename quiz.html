@@ -1,1 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>BurnGuard - Burnout Quiz</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="sidebar">
+    <div class="logo">BurnGuard</div>
+    <ul>
+      <li><a href="index.html">🏠 Home</a></li>
+      <li><a href="quiz.html">🧠 Quiz</a></li>
+      <li><a href="tracker.html">📊 Tracker</a></li>
+      <li><a href="journal.html">📝 Journal</a></li>
+      <li><a href="forum.html">🤝 Forum</a></li>
+      <li><a href="chillup.html">🧘 ChillUp</a></li>
+    </ul>
+  </div>
 
+  <main class="content">
+    <h2>🧠 Burnout Quiz</h2>
+    <p>This quiz is adapted from the <b>Maslach Burnout Inventory</b> and <b>WHO-5 Wellbeing Index</b> to help you reflect on your mental energy levels.</p>
+
+    <form id="quizForm">
+      <ol>
+        <li>I feel emotionally drained after a day of work or study.</li>
+        <li>I feel tired even after sleeping well.</li>
+        <li>I find it hard to get excited about my daily tasks.</li>
+        <li>I feel disconnected or unmotivated in the things I usually enjoy.</li>
+        <li>I feel like I’m just going through the motions most days.</li>
+        <li>I avoid tasks because they feel overwhelming.</li>
+        <li>I doubt the value of what I’m doing.</li>
+        <li>I feel I’m not achieving as much as I should.</li>
+        <li>I have felt calm and relaxed in the last few days. <i>(reverse scored)</i></li>
+        <li>I have woken up feeling fresh and rested. <i>(reverse scored)</i></li>
+      </ol>
+
+      <p><b>Rate each from 0 (Never) to 4 (Always):</b></p>
+
+      <div class="quiz-inputs">
+        <!-- Generate input fields for each question -->
+        <script>
+          for (let i = 0; i < 10; i++) {
+            document.write(`<label>Q${i + 1}:
+              <select name="q${i}" required>
+                <option value="">--Select--</option>
+                <option value="0">0 - Never</option>
+                <option value="1">1 - Rarely</option>
+                <option value="2">2 - Sometimes</option>
+                <option value="3">3 - Often</option>
+                <option value="4">4 - Always</option>
+              </select>
+            </label><br><br>`);
+          }
+        </script>
+      </div>
+
+      <button type="submit">Submit Quiz</button>
+    </form>
+
+    <section id="result" style="margin-top:2rem;"></section>
+  </main>
+  <script src="js/quiz.js"></script>
+</body>
+</html>

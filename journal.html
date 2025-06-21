@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>BurnGuard - Journal</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="logo">BurnGuard</div>
+    <div class="profile"><a href="index.html">🏠 Home</a></div>
+  </header>
+
+  <main>
+    <h2>📝 Mood & Energy Journal</h2>
+    <form id="journalForm">
+      <label for="mood">Today's Mood</label>
+      <select id="mood" required>
+        <option value="">Select</option>
+        <option value="😊">😊 Happy</option>
+        <option value="😐">😐 Neutral</option>
+        <option value="😢">😢 Sad</option>
+        <option value="😴">😴 Tired</option>
+        <option value="😫">😫 Overwhelmed</option>
+      </select>
+
+      <label for="entry">Thoughts</label>
+      <textarea id="entry" rows="6" required></textarea>
+
+      <button type="submit">Save</button>
+    </form>
+
+    <div id="savedEntries"></div>
+  </main>
+    <div class="sidebar">
+    <div class="logo">BurnGuard</div>
+    <ul>
+        <li><a href="index.html">🏠 Home</a></li>
+        <li><a href="quiz.html">🧠 Burnout Quiz</a></li>
+        <li><a href="tracker.html">📊 Tracker</a></li>
+        <li><a href="journal.html">📝 Journal</a></li>
+        <li><a href="fourm.html">🤝 Forum</a></li>
+        <li><a href="chillup.html">🧘 ChillUp</a></li>
+    </ul>
+    </div>
+  <script src="js/journal.js"></script>
+</body>
+</html>

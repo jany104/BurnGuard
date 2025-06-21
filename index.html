@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BurnGuard - Home</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+ <body>
+  <div class="container">
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar">
+      <div class="logo">BurnGuard</div>
+      <ul>
+        <li><a href="index.html">🏠 Home</a></li>
+        <li><a href="quiz.html">🧠 Burnout Quiz</a></li>
+        <li><a href="tracker.html">📊 Tracker</a></li>
+        <li><a href="journal.html">📝 Journal</a></li>
+        <li><a href="fourm.html">🤝 Forum</a></li>
+        <li><a href="chillup.html">🧘 ChillUp</a></li>
+      </ul>
+    </nav>
+
+    <!-- Main Page Content -->
+    <main class="content">
+      <!-- Keep your existing main sections here -->
+      <section class="mood-tracker">
+        <h2>How are you feeling today?</h2>
+        <div class="emojis">
+          <button onclick="saveMood('😊')">😊</button>
+          <button onclick="saveMood('😐')">😐</button>
+          <button onclick="saveMood('😔')">😔</button>
+          <button onclick="saveMood('😠')">😠</button>
+          <button onclick="saveMood('😴')">😴</button>
+        </div>
+        <p id="lastMood"></p>
+      </section>
+
+      <section class="burnout-score">
+        <h3>Your Last Burnout Score</h3>
+        <p id="burnoutDisplay">Loading...</p>
+      </section>
+
+      <section class="quote-box">
+        <h3>💡 Motivation for You</h3>
+        <p id="quote-text">Loading...</p>
+        <p id="quote-author"></p>
+      </section>
+
+      <section class="tech-laws">
+        <h3>👩‍💻 Tech Laws for Women</h3>
+        <ul>
+          <li>Equal Pay Act – Right to equal pay</li>
+          <li>POSH Act – Protection from harassment</li>
+          <li>IT Act – Right to digital safety & privacy</li>
+        </ul>
+      </section>
+    </main>
+  </div>
+
+  <script src="js/index.js"></script>
+</body>
+
+</body>
+</html>
