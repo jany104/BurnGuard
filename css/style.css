@@ -1,0 +1,282 @@
+/* === Theme Variables === */
+:root {
+  --bg-dark: #121212;
+  --bg-medium: #1e1e1e;
+  --text-light: #fcefe3;
+  --accent: #ffd6a5;
+  --accent-hover: #ffc285;
+}
+
+
+/* === Global Reset === */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  display: flex;
+  min-height: 100vh;
+}
+
+/* === Sidebar Styles === */
+.sidebar {
+  width: 240px;
+  background-color: var(--bg-medium);
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-right: 3px solid var(--accent);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.sidebar .logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--accent);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.sidebar ul {
+  list-style: none;
+  width: 100%;
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 1rem;
+}
+
+.sidebar a {
+  color: var(--text-light);
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding: 0.7rem 1rem;
+  display: block;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.sidebar a:hover {
+  background-color: var(--accent-hover);
+  color: var(--bg-dark);
+}
+
+/* === Main Content Styles === */
+main,
+.content {
+  margin-left: 240px;
+  padding: 2rem;
+  flex: 1;
+}
+
+/* === Typography === */
+h1, h2, h3 {
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+ul {
+  padding-left: 1.5rem;
+}
+
+p {
+  margin: 0.5rem 0;
+}
+
+/* === Buttons === */
+button {
+  background-color: var(--accent);
+  color: var(--bg-dark);
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 1rem;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: var(--accent-hover);
+}
+
+/* === Form Inputs === */
+input[type="number"],
+select,
+textarea {
+  width: 100%;
+  padding: 0.6rem;
+  margin-top: 0.3rem;
+  margin-bottom: 1rem;
+  background-color: var(--bg-medium);
+  border: none;
+  border-radius: 5px;
+  color: var(--text-light);
+  font-size: 1rem;
+}
+
+/* === Mood Emojis === */
+.mood-tracker .emojis button {
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.mood-tracker .emojis button:hover {
+  transform: scale(1.3);
+}
+
+/* === Quote/Post Boxes === */
+.quote-box {
+  background-color: var(--bg-medium);
+  border-left: 4px solid var(--accent);
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 5px;
+  font-style: italic;
+}
+
+.quote-box b {
+  color: var(--accent);
+}
+
+/* === Section Spacing === */
+section {
+  margin-bottom: 2rem;
+}
+textarea {
+  width: 100%;
+  background-color: var(--bg-medium);
+  color: var(--text-light);
+  border: none;
+  border-radius: 6px;
+  padding: 1rem;
+  margin-top: 1rem;
+  font-size: 1rem;
+  resize: vertical;
+}
+
+.quote-box {
+  background-color: var(--bg-medium);
+  border-left: 4px solid var(--accent);
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 6px;
+}
+
+.delete-btn {
+  background-color: crimson;
+  color: #fff;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  margin-top: 0.5rem;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background-color: darkred;
+}
+/* === Quiz Container Styling === */
+main.content {
+  padding: 2rem;
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+}
+
+/* === Form & Questions === */
+#quizForm {
+  background-color: var(--bg-medium);
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 214, 165, 0.1);
+  margin-top: 1rem;
+}
+
+#quizForm ol {
+  padding-left: 1.2rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+  font-size: 1rem;
+}
+
+#quizForm select {
+  width: 100%;
+  padding: 0.6rem;
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.quiz-inputs label {
+  display: block;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+/* === Submit Button === */
+#quizForm button[type="submit"] {
+  background-color: var(--accent);
+  color: var(--bg-dark);
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#quizForm button[type="submit"]:hover {
+  background-color: var(--accent-hover);
+}
+
+/* === Result Section === */
+#result {
+  background-color: var(--bg-medium);
+  border-left: 5px solid var(--accent);
+  padding: 1rem 1.2rem;
+  border-radius: 8px;
+  margin-top: 2rem;
+  font-size: 1.05rem;
+}
+
+#result h3 {
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+
+#result p {
+  margin-top: 0.5rem;
+  color: var(--text-light);
+}
+
+/* === Responsive === */
+@media screen and (max-width: 768px) {
+  .sidebar {
+    display: none; /* Optional: hide sidebar on mobile */
+  }
+
+  main.content {
+    margin-left: 0;
+    padding: 1.5rem;
+  }
+}
+
