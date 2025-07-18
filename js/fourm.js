@@ -1,4 +1,3 @@
-// Load posts from localStorage on page load
 window.onload = function () {
   loadPosts();
 };
